@@ -1,0 +1,149 @@
+/* Google Fonts — Inter + JetBrains Mono for app chrome */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme inline {
+  /* App chrome colors (monochrome) */
+  --color-app-black: #111111;
+  --color-app-white: #FFFFFF;
+  --color-app-off-white: #FAFAFA;
+  --color-app-gray-50: #F5F5F5;
+  --color-app-gray-100: #E5E7EB;
+  --color-app-gray-200: #D1D5DB;
+  --color-app-gray-400: #9CA3AF;
+  --color-app-gray-500: #6B7280;
+  --color-app-gray-600: #4B5563;
+  --color-app-gray-900: #111827;
+
+  /* Semantic (system feedback only) */
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Font sizes */
+  --text-display: 3.5rem;
+  --text-display--line-height: 1.05;
+  --text-display--letter-spacing: -0.03em;
+
+  --text-h1: 2.25rem;
+  --text-h1--line-height: 1.1;
+  --text-h1--letter-spacing: -0.025em;
+
+  --text-h2: 1.75rem;
+  --text-h2--line-height: 1.15;
+  --text-h2--letter-spacing: -0.02em;
+
+  --text-h3: 1.25rem;
+  --text-h3--line-height: 1.2;
+  --text-h3--letter-spacing: -0.01em;
+
+  --text-h4: 1rem;
+  --text-h4--line-height: 1.3;
+  --text-h4--letter-spacing: -0.005em;
+
+  --text-body-lg: 1.125rem;
+  --text-body-lg--line-height: 1.7;
+
+  --text-body: 0.9375rem;
+  --text-body--line-height: 1.6;
+
+  --text-body-sm: 0.875rem;
+  --text-body-sm--line-height: 1.5;
+
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.4;
+  --text-caption--letter-spacing: 0.01em;
+
+  --text-label: 0.75rem;
+  --text-label--line-height: 1.3;
+  --text-label--letter-spacing: 0.1em;
+
+  /* Border radius */
+  --radius-btn: 8px;
+  --radius-input: 8px;
+  --radius-card: 12px;
+  --radius-card-lg: 16px;
+  --radius-phone: 40px;
+  --radius-pill: 999px;
+
+  /* Semantic text colors (aliases for readability) */
+  --color-app-text-muted: #9CA3AF;
+  --color-app-text-body: #4B5563;
+
+  /* Semantic background */
+  --color-app-bg-alt: #F5F5F5;
+
+  /* Shadows */
+  --shadow-card-hover: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-dropdown: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-modal: 0 16px 48px rgba(0, 0, 0, 0.12);
+  --shadow-float: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Base styles */
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #4B5563;
+  background: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection color — neutral */
+::selection {
+  background: #111111;
+  color: #FFFFFF;
+}
+
+/* Focus ring style — black outline */
+:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Skip to content link — accessible keyboard navigation */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: #111111;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}

@@ -1,0 +1,73 @@
+table:
+  name: brand_projects
+  schema: public
+configuration:
+  column_config:
+    created_at:
+      custom_name: createdAt
+    thumbnail_color:
+      custom_name: thumbnailColor
+    updated_at:
+      custom_name: updatedAt
+    user_id:
+      custom_name: userId
+  custom_column_names:
+    created_at: createdAt
+    thumbnail_color: thumbnailColor
+    updated_at: updatedAt
+    user_id: userId
+  custom_root_fields:
+    delete: deleteBrandProjects
+    delete_by_pk: deleteBrandProject
+    insert: insertBrandProjects
+    insert_one: insertBrandProject
+    select: brandProjects
+    select_aggregate: brandProjectsAggregate
+    select_by_pk: brandProject
+    update: updateBrandProjects
+    update_by_pk: updateBrandProject
+object_relationships:
+  - name: user
+    using:
+      foreign_key_constraint_on: user_id
+insert_permissions:
+  - role: user
+    permission:
+      check: {}
+      set:
+        user_id: X-Hasura-User-Id
+      columns:
+        - name
+        - state
+        - thumbnail_color
+select_permissions:
+  - role: user
+    permission:
+      columns:
+        - id
+        - user_id
+        - name
+        - state
+        - thumbnail_color
+        - created_at
+        - updated_at
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+update_permissions:
+  - role: user
+    permission:
+      columns:
+        - name
+        - state
+        - thumbnail_color
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+      check: null
+delete_permissions:
+  - role: user
+    permission:
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
