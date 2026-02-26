@@ -1,0 +1,99 @@
+table:
+  name: shared_links
+  schema: public
+configuration:
+  column_config:
+    brand_name:
+      custom_name: brandName
+    created_at:
+      custom_name: createdAt
+    created_by:
+      custom_name: createdBy
+    primary_color:
+      custom_name: primaryColor
+    project_id:
+      custom_name: projectId
+    view_count:
+      custom_name: viewCount
+  custom_column_names:
+    brand_name: brandName
+    created_at: createdAt
+    created_by: createdBy
+    primary_color: primaryColor
+    project_id: projectId
+    view_count: viewCount
+  custom_root_fields:
+    delete: deleteSharedLinks
+    delete_by_pk: deleteSharedLink
+    insert: insertSharedLinks
+    insert_one: insertSharedLink
+    select: sharedLinks
+    select_aggregate: sharedLinksAggregate
+    select_by_pk: sharedLink
+    update: updateSharedLinks
+    update_by_pk: updateSharedLink
+object_relationships:
+  - name: creator
+    using:
+      foreign_key_constraint_on: created_by
+insert_permissions:
+  - role: public
+    permission:
+      check: {}
+      columns:
+        - id
+        - state
+        - brand_name
+        - primary_color
+        - project_id
+  - role: user
+    permission:
+      check: {}
+      set:
+        created_by: X-Hasura-User-Id
+      columns:
+        - id
+        - state
+        - brand_name
+        - primary_color
+        - project_id
+select_permissions:
+  - role: public
+    permission:
+      columns:
+        - id
+        - state
+        - brand_name
+        - primary_color
+        - created_at
+      filter: {}
+  - role: user
+    permission:
+      columns:
+        - id
+        - state
+        - brand_name
+        - primary_color
+        - project_id
+        - view_count
+        - created_at
+      filter: {}
+update_permissions:
+  - role: public
+    permission:
+      columns:
+        - state
+        - brand_name
+        - primary_color
+        - view_count
+      filter: {}
+      check: null
+  - role: user
+    permission:
+      columns:
+        - state
+        - brand_name
+        - primary_color
+        - view_count
+      filter: {}
+      check: null

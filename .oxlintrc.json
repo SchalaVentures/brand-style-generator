@@ -1,0 +1,8 @@
+{
+  "plugins": ["react", "nextjs", "typescript", "import"],
+  "rules": {
+    "no-unused-vars": "error",
+    "react/react-in-jsx-scope": "off"
+  },
+  "ignorePatterns": ["node_modules", ".next", ".open-next"]
+}
