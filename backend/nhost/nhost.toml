@@ -181,7 +181,14 @@ version = '17.7-20260113-1'
 [postgres.resources.storage]
 capacity = 1
 
-[provider]
+[provider.smtp]
+host = 'smtp.postmarkapp.com'
+port = 587
+user = '{{ secrets.POSTMARK_API_KEY }}'
+password = '{{ secrets.POSTMARK_API_KEY }}'
+sender = 'Brand Style Generator <hello@brandstylegenerator.com>'
+secure = false
+method = 'LOGIN'
 
 [storage]
 version = '0.11.1'
