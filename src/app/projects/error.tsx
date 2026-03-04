@@ -13,9 +13,9 @@ interface ErrorPageProps {
 const IS_PRODUCTION: boolean =
   process.env['APP_ENV'] === 'production' || process.env['NODE_ENV'] === 'production'
 
-export default function Error({ error, reset }: ErrorPageProps): React.ReactElement {
+export default function ProjectsError({ error, reset }: ErrorPageProps): React.ReactElement {
   useEffect(() => {
-    console.error('Global error boundary caught:', error)
+    console.error('Projects error boundary caught:', error)
   }, [error])
 
   return (
@@ -24,9 +24,10 @@ export default function Error({ error, reset }: ErrorPageProps): React.ReactElem
         <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-50">
           <AlertTriangle className="h-6 w-6 text-red-500" />
         </div>
-        <h1 className="mb-2 text-xl font-bold text-app-black">Something went wrong</h1>
+        <h1 className="mb-2 text-xl font-bold text-app-black">Couldn&apos;t load your projects</h1>
         <p className="mb-4 text-sm text-app-text-muted">
-          An unexpected error occurred. Your work is safe — try refreshing or go back to the app.
+          We had trouble fetching your saved projects. This might be a temporary issue — try again
+          or head back to the builder.
         </p>
 
         {!IS_PRODUCTION && (
@@ -43,9 +44,9 @@ export default function Error({ error, reset }: ErrorPageProps): React.ReactElem
           <Button onClick={reset} variant="primary" className="w-full">
             Try again
           </Button>
-          <Link href="/" className="block">
+          <Link href="/create" className="block">
             <Button variant="secondary" className="w-full">
-              Go home
+              Back to builder
             </Button>
           </Link>
         </div>

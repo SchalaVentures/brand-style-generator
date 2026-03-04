@@ -147,3 +147,70 @@ body {
 .skip-link:focus {
   top: 0;
 }
+
+/* Prose styling for guide content */
+.prose-custom {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: #4B5563;
+}
+
+.prose-custom p {
+  margin-bottom: 1.5rem;
+}
+
+.prose-custom h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #111111;
+  letter-spacing: -0.015em;
+}
+
+.prose-custom h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #111111;
+}
+
+.prose-custom ul,
+.prose-custom ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.prose-custom ul {
+  list-style-type: disc;
+}
+
+.prose-custom ol {
+  list-style-type: decimal;
+}
+
+.prose-custom li {
+  margin-bottom: 0.5rem;
+}
+
+.prose-custom strong {
+  font-weight: 600;
+  color: #111111;
+}
+
+.prose-custom em {
+  font-style: italic;
+}
+
+.prose-custom a {
+  color: #111111;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose-custom a:hover {
+  text-decoration: none;
+}

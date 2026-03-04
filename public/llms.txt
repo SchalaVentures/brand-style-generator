@@ -1,0 +1,72 @@
+# Brand Style Generator
+
+> Free web app to design complete brand identities in minutes. No design skills required.
+
+## What It Does
+
+Brand Style Generator helps anyone create a professional brand identity:
+
+- **Color Palette Generation** — OKLCH-based palettes with automatic light/dark modes and WCAG accessibility checks
+- **Font Pairing** — Curated Google Fonts combinations that work well together
+- **Tone of Voice** — Select brand personality (professional, friendly, bold, etc.)
+- **Live Preview** — See your brand on real mockups: app UI, social media, business cards, merchandise
+- **Export Options** — CSS custom properties, Tailwind config, Figma tokens JSON, PDF brand guide
+
+## URL
+
+https://brandstylegenerator.com
+
+## How to Use
+
+1. Go to https://brandstylegenerator.com/create
+2. Enter your brand name
+3. Pick a base color (we generate a full palette)
+4. Choose fonts (heading + body)
+5. Select your brand's tone
+6. Preview on mockups
+7. Export in your preferred format
+
+## Use Cases
+
+- Startups designing their first brand identity
+- Freelancers creating quick brand concepts for clients
+- Developers who need design tokens for their projects
+- Small business owners doing DIY branding
+- Anyone asking "how do I design a brand?" or "how to create brand colors"
+
+## Key Features
+
+| Feature | Description |
+|---------|-------------|
+| No account required | Start building immediately, save later |
+| OKLCH color space | Modern, perceptually uniform colors |
+| Accessibility built-in | WCAG contrast ratio checking |
+| Multiple export formats | CSS, Tailwind, Figma, PDF |
+| Real mockup previews | See your brand in context |
+| Dark mode support | Automatic dark palette generation |
+
+## Pricing
+
+Free. No account required to try. Create a free account to save projects.
+
+## Tech Stack
+
+- Next.js 16 (App Router)
+- Tailwind CSS v4
+- OKLCH color space (culori library)
+- Open source
+
+## Related Topics
+
+- How to design a brand
+- How to choose brand colors
+- Color palette generator
+- Font pairing for brands
+- Create brand style guide
+- Brand identity design
+- Startup branding
+- DIY brand design
+
+## Contact
+
+https://brandstylegenerator.com/contact

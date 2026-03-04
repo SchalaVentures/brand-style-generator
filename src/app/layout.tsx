@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { AuthInitializer } from '@/components/AuthInitializer'
+import { WebApplicationJsonLd, OrganizationJsonLd } from '@/components/JsonLd'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -10,12 +11,22 @@ export const metadata: Metadata = {
   description:
     'Pick colors, fonts, and tone. See your brand come alive on real product mockups. Export to CSS, Tailwind, or Figma tokens. Free and open source.',
   keywords: [
+    // Tool keywords
     'brand style generator',
-    'color palette',
-    'font pairing',
-    'brand guide',
+    'color palette generator',
+    'font pairing tool',
+    'brand guide maker',
     'tailwind colors',
     'figma tokens',
+    // Problem/question keywords (SEO)
+    'how to design a brand',
+    'how to create brand colors',
+    'brand identity design',
+    'startup branding',
+    'DIY brand design',
+    'free brand kit maker',
+    'brand guidelines generator',
+    'color scheme generator',
   ],
   openGraph: {
     type: 'website',
@@ -44,6 +55,10 @@ export default function RootLayout({
 }>): React.ReactElement {
   return (
     <html lang="en">
+      <head>
+        <WebApplicationJsonLd />
+        <OrganizationJsonLd />
+      </head>
       <body className="antialiased">
         <AuthInitializer>{children}</AuthInitializer>
       </body>
